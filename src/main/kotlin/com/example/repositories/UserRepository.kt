@@ -16,6 +16,12 @@ object UserRepository {
     }
 
     fun getUserById(id: String): UserData? {
-        return masterDataList.find { e -> id == e.id }
+        return masterDataList.find { it.id == id }
+    }
+
+    fun updateUser(id: String, name: String): UserData? {
+        val target = getUserById(id) ?: return null
+        target.name = name
+        return target
     }
 }
