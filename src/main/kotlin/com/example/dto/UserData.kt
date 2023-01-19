@@ -1,3 +1,3 @@
 package com.example.dto
 
-data class UserData(val name: String, val address: AddressData)
+data class UserData(val id: String, val name: String, val address: AddressData)

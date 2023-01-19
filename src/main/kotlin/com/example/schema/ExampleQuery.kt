@@ -8,10 +8,10 @@ object ExampleQuery : Query {
     fun hello() = "Hello Query"
 
     // 実行結果を返す場合
-    // { user { name , address { city } } }
-    fun user() = GetUser.execute()
+    // { users { id, name , address { city } } }
+    fun users() = GetUser.execute()
 
     // 引数付の場合
-    // { userById(id: "foobar") { name , address { city } } }
+    // { userById(id: "user-1") { id, name , address { city } } }
     fun userById(id: String) = GetUser.execute(id)
 }
